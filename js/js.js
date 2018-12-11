@@ -21,3 +21,4 @@ function setCarouselSize() {
 function setContainer() {
     $(".principal").css("max-width", $(window).width());
 }
+

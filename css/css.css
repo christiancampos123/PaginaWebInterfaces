@@ -1,5 +1,5 @@
 body {
-    background-image: url(../img/background.jpg)
+    background-image: url(../img/background3.jpg);
 }
 
 .navbar-dark {
@@ -14,7 +14,7 @@ body {
 
 .principal {
     width: 100%;
-
+    color:white;
     margin-top: 2%;
     height: 100%;
 }
@@ -28,22 +28,19 @@ body {
 }
 
 #contentDiv {
-    background-color: green;
+    font-size:125%;
 }
 
 .right-margin {
-    background-color: blue;
 }
 
 .infoPrincipal{
-    background-color:red;
     width: 95%;
     margin-left:5%;
 }
 
 .fotosIndex{
-    width:80%;
-    margin-left:10%;
+    width:100%;
 }
 
 .twitterDiv{
@@ -52,6 +49,18 @@ body {
     margin-left:5%;
     margin-top:10%;
     background-color:green;
+}
+
+.timeline-Body{
+    height:600px;
+}
+
+.social-net{
+    margin-right:40px;
+    font-size:300%;
+    margin-bottom:50px;
+    text-decoration:none;
+    
 }
 
 /* Pantalla Mediana */
@@ -90,5 +99,10 @@ body {
         background-color:red;
         width: 100%;
         margin-left:2%;
+    }
+
+    .fotosIndex{
+        width:80%;
+        margin-left:10%;
     }
 }
