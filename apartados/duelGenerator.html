@@ -23,6 +23,12 @@
 
 
 
+    <style>
+
+
+    </style>
+
+
 </head>
 
 <body>
@@ -65,21 +71,22 @@
                         </a>
                     </li>
                     <!------------------Start------------------->
+                    <!------------------Usefull Content------------------->
+                    <li class="nav-item">
+                        <a class="nav-link" href="../apartados/duelGenerator.html">
+                            <span class="fa fa-list fa-lg">
+
+                            </span>
+                            Contenido Útil
+                        </a>
+                    </li>
+                    <!------------------Start------------------->
                     <li class="nav-item">
                         <a class="nav-link" href="../apartados/start.html">
                             <span class="fa fa-list fa-lg">
 
                             </span>
-                            Inicio
-                        </a>
-                    </li>
-                    <!------------------Duel Generator------------------->
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <span class="fa fa-list fa-lg">
-
-                            </span>
-                            Generador de Duelo
+                            start
                         </a>
                     </li>
                     <!------------------Help------------------->
@@ -98,44 +105,166 @@
     </nav>
 
     <!------------------------------------------------------------------------Principal----------------------------------------------------------------------------------->
-    <div class="container principal">
-        <div id="contentDiv">
-            <p>
-                hola
+    <div id="contentDiv" class="col-12 col-xl-9">
+        <div class="d-flex justify-content-center allign-items-center mb-3 duelG">
+            <div class="infoPrincipal justify-content-center">
 
-            </p>
-        </div>
-    </div>
+                <center>
 
-    <!------------------------------------------------------------------------footer----------------------------------------------------------------------------------->
-    <footer class="footer">
-            <div class="container">
-                <div class="row justify-content-center">
-    
-    
-                    <b><span id="foter-follow"> </span></b>
-    
-                </div>
-                <!--logos redes sociales-->
-                <div id="social-net" class="row justify-content-center">
-                    <a href="#" id="social-net-twitter" class="social-net d-flex nounderline align-items-center justify-content-center" style="text-decoration:none" >
-                        <i class="fab fa-twitter nounderline"></i>
-                    </a>
-                    <a href="#" id="social-net-facebook" class="social-net d-flex align-items-center justify-content-center" style="text-decoration:none">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="#" id="social-net-instagram" class="social-net d-flex align-items-center justify-content-center" style="text-decoration:none"><i
-                            class="fab fa-instagram"></i>
-                    </a>
-                </div>
-                <!--Copy-Right-->
-                <div class="row justify-content-center">
-                    <div class="col-auto">
-                        <p>© Me-Me-OH!</p>
+                    <form name="f1"><br>
+                        <h3>Calculadora de Life Points</h3>
+                        <input type="text" name="txtcaja1">
+                        <br>
+                        <input type="text" name="txtcaja2" value="8000">
+                        <br>
+                        <input type="button" onclick="escribir(this.value)" value="7">
+                        <input type="button" onclick="escribir(this.value)" value="8">
+                        <input type="button" onclick="escribir(this.value)" value="9">
+                        <input type="button" class="clear" onClick="document.f1.reset(); blocdel = false;" value="C">
+                        <br>
+                        <input type="button" onclick="escribir(this.value)" value="4">
+                        <input type="button" onclick="escribir(this.value)" value="5">
+                        <input type="button" onclick="escribir(this.value)" value="6">
+                        <input type="button" class="arit" onClick="arit('-')" value="-">
+                        <br>
+                        <input type="button" onclick="escribir(this.value)" value="1">
+                        <input type="button" onclick="escribir(this.value)" value="2">
+                        <input type="button" onclick="escribir(this.value)" value="3">
+                        <input type="button" class="arit" onClick="arit('+')" value="+">
+                        <br>
+                        <input type="button" onclick="escribir(this.value)" class="cero" value="0">
+                        <input type="button" class="igual" onClick="calcular()" value="=">
+                        <br>
+                    </form>
+                </center>
+
+                <div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="accordion-container">
+                        <a href="#" class="accordion-titulo">Messi<span class="toggle-icon"></span></a>
+                        <div class="accordion-content">
+                            <img src="http://e0.365dm.com/15/05/660x350/champions-league-barcelona-bayern-munich-soccer-messi_3299830.jpg?20150506214236"
+                                alt="" />
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                pariatur.
+
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                                veritatis et quasi architecto beatae vitae dicta sunt explicabo. Excepteur sint
+                                occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                                est laborum.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </footer>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var borrar = false;
+        function deletecarac() {
+            var caja2 = document.f1.txtcaja2.value;
+            if (caja2 == "" || caja2 == "0" || caja2.length == 1 && blocdel != true) {
+                document.f1.txtcaja2.value = "0";
+            }
+            else if (blocdel != true) {
+                var res = caja2.substring(0, caja2.length - 1);
+                document.f1.txtcaja2.value = res;
+            }
+        }
+        function escribir(n) {
+            var caja2 = document.f1.txtcaja2.value;
+            if (borrar) {
+                //alert("se borro");
+                document.f1.txtcaja2.value = "";
+                borrar = false;
+                document.f1.txtcaja2.value = n;
+            }
+            else if (caja2 == "0" && n != ".") {
+                cajao = caja2.replace("0", "")
+                document.f1.txtcaja2.value = cajao + n;
+            }
+            else {
+                document.f1.txtcaja2.value = caja2 + n;
+            }
+        }
+
+        function arit(o) {
+            var caja1 = document.f1.txtcaja1.value;
+            var caja2 = document.f1.txtcaja2.value;
+            var unum = caja1.substring(caja1.length - 1);
+            calcular()
+            if (unum == "+" || unum == "-") {
+                unum = unum.replace(unum, o);
+                var res = caja1.substring(0, caja1.length - 1);
+                document.f1.txtcaja1.value = res + unum;
+            }
+            if (caja1 == "" && caja2 != "") {
+                document.f1.txtcaja1.value = caja2 + o;
+            }
+            else {
+                document.f1.txtcaja1.value = caja1 + caja2 + o;
+            }
+            borrar = true;
+        }
+        function calcular() {
+            var caja1 = document.f1.txtcaja1.value;
+            var caja2 = document.f1.txtcaja2.value;
+            document.f1.txtcaja2.value = eval(caja1 + caja2);
+            document.f1.txtcaja1.value = "";
+            borrar = true;
+            blocdel = true;
+        }
+        function masmenos() {
+            var caja2 = document.f1.txtcaja2.value;
+            if (caja2 > 0) {
+                document.f1.txtcaja2.value = "(-" + caja2 + ")";
+            }
+            else {
+                cajaplus = caja2.replace(/[-|(|)]/g, "");
+                document.f1.txtcaja2.value = cajaplus;
+            }
+        }
+    </script>
+
+    <!------------------------------------------------------------------------footer----------------------------------------------------------------------------------->
+    <footer class="footer">
+        <div class="container">
+            <div class="row justify-content-center">
+
+
+                <b><span id="foter-follow"> </span></b>
+
+            </div>
+            <!--logos redes sociales-->
+            <div id="social-net" class="row justify-content-center">
+                <a href="#" id="social-net-twitter" class="social-net d-flex nounderline align-items-center justify-content-center"
+                    style="text-decoration:none">
+                    <i class="fab fa-twitter nounderline"></i>
+                </a>
+                <a href="#" id="social-net-facebook" class="social-net d-flex align-items-center justify-content-center"
+                    style="text-decoration:none">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" id="social-net-instagram" class="social-net d-flex align-items-center justify-content-center"
+                    style="text-decoration:none"><i class="fab fa-instagram"></i>
+                </a>
+            </div>
+            <!--Copy-Right-->
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <p>© Me-Me-OH!</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 </body>
 
