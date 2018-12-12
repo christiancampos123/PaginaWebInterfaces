@@ -28,7 +28,6 @@ $(document).ready(function () {
 
     });
 
-
 });
 
 // Functions
@@ -38,3 +37,4 @@ function setCarouselSize() {
     $(".carousel-item").css("width", $(window).width());
     $(".carousel-image").css("width", $(window).width());
 }
+
