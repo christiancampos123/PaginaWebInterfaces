@@ -21,7 +21,7 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
 
-
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 </head>
 
@@ -32,7 +32,7 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand mr-auto" href="#"><img src="../img/logo" height="30" width="41"></a>
+            <a class="navbar-brand mr-auto" href="#"><img src="../img/logo.png" height="30" width="41"></a>
             <div class="collapse navbar-collapse" id="Navbar">
 
                 <ul class="navbar-nav mr-auto">
@@ -101,56 +101,98 @@
     <div class="container principal secundario justify-content-center">
         <div class="row">
 
-            <div id="contentDiv" class="col-12 col-xl-9">
-                <div class="infoPrincipal justify-content-center">
+            <div id="contentDiv2" class="col-12 col-xl-9">
+                <div class="infoPrincipalz justify-content-center">
                     <!------------------First part------------------->
-                    <p class="justify-content-center">
-                        <h1> Me-Me-OH</h1>
-                        <h3>Un nuevo desafio para los amantes de las cartas!</h3>
-                    </p>
-                    <p>
-                        Las cartas desde siempre han sido el pasatiempo perfecto para todos aquellos con un poco de
-                        maña y alguna noción de estrategia. Ahora
-                        ha llegado la evolución a este terreno tan explotado con un poco de frescura. Un juego de
-                        ingenio jugable tanto en físico como online.
-                        Incluye mecánnicas totalmente innovadoras con las que se podran hacer miles de combinaciones a
-                        lo largo de los duelos. Además el juego esta
-                        en continua expansión, de modo que de un modo dinamico el juego evolucionará así como sus
-                        usuarios.
-                    </p>
-                    <div>
-                        <img class="fotosIndex img-fuid" id="imagenCartas" src="img/cartasN.jpg"><img>
-                    </div>
-                    <br>
-                    <br>
-                    <br>
-                    <!------------------Second Part------------------->
-                    <p>
-                        <h1> Compite al mas alto nivel</h1>
-                        <h3>Preparate para el mundial 2019!</h3>
-                    </p>
-                    <p>
-                        Me-Me-OH es el juego ideal para llevar a cualquier lado. La cantidad de modos de juego hace que
-                        puedan ser partidas largas o mas amenas si se
-                        desea. <br>
-                        Cada vez está mas aceptado el mundo de los videojuegos y de las cartas como un deporte
-                        competitivo, tanto a nivel
-                        individual, como en equipo, por ello cada vez mas gente se une a todos estos eventos para
-                        participar o para espectar
-                        las partidas mas emocionantes.<br>
-                        No siendo suficiente con eso, la experiencia multijugador para los usuarios mas
-                        experimentados mejora a nivel mundial en los torneos que se
-                        celebran y con el gran premio final del mundial que asciende a 1.000.000$ para aquel que se
-                        proclame campeón.
 
-                    </p>
-
-                    <div>
-                        <img class="fotosIndex img-fuid" id="imagenMundial" src="img/mundial.jpg"><img>
+                    <div class="col-12">
+                        <h3>Contactanos!</h3>
+                        <hr>
                     </div>
+
+                    <div class="col-12 col-sm-6">
+                        <h3>Información de contacto</h3>
+                    </div>
+                    <div class="row otro offset-sm-1">
+                        <div class="col-12 col-sm-12">
+                            <div>
+                                <h5>Calle</h5>
+                                <address style="font-size: 100%">
+                                    Caracas,6A<br>
+                                    CP: 07007<br>
+                                    ESP<br>
+                                    <i></i>: +34 6597913316<br>
+
+                                    <i></i>:
+                                    <a href="mailto:siampalace@food.net">christian_raulito@hotmail.com</a>
+                                    <div class="btn-group" role="group">
+                                        <a role="button" class="btn btn-primary" href="tel:+34659793316"><i class="fa fa-phone"></i>
+                                            Call</a>
+                                        <a role="button" class="btn btn-info"><i class="fa fa-skype"></i> Skype</a>
+                                        <a role="button" class="btn btn-success" href="mailto:christian_raulito@hotmail.com"><i
+                                                class="fa fa-envelope-o"></i>
+                                            Email</a>
+                                    </div>
+
+                                </address>
+                            </div>
+                        </div>
+
+
+                        <!-- IMPORTANT -->
+                    </div>
+
+                    <div class="col-12 col-sm-10">
+                        <div>
+                            <br>
+                            <br>
+                            <br>
+
+                            <h3>Localización en tu pais</h3>
+
+                            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d543.6944155656595!2d2.667422509874426!3d39
+                            .568624505131986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x55bc574de040df4a!2sIES+Francesc+de+Borja+Moll!5e0!3m2!
+                            1ses!2ses!4v1544644229608"
+                                allowfullscreen></iframe>
+                        </div>
+                        <!-- IMPORTANT -->
+                        <div>
+
+                        </div>
+                    </div>
+                    <br><br><br>
+
+                    <form class="formx" action="/my-handling-form-page" method="post">
+
+                        <div>
+                            <h3 style="color:black">Envianos tus propuestas</h3>
+                            <br>
+                            <label style="color:black" for="mail">Nombre:</label>
+                            <input type="email" id="mail" />
+                        </div>
+                        <div>
+                            <label style="color:black" for="mail">E-mail:</label>
+                            <input type="email" id="mail" />
+                        </div>
+                        <div>
+                            <label style="color:black" for="msg">Mensage:</label>
+                            <textarea id="msg"></textarea>
+                        </div>
+
+                        <div class="button">
+                            <button id="button" onClick="boton()"; type="button">Enviar</button>
+                        </div>
+                        <br>
+
+                    </form>
                     <br>
                     <br>
                     <br>
+                    <br>
+
+
+
+
                 </div>
             </div>
         </div>
@@ -168,7 +210,7 @@
             <!--logos redes sociales-->
             <div id="social-net" class="row justify-content-center">
                 <a href="#" id="social-net-twitter" class="social-net d-flex nounderline align-items-center justify-content-center"
-                    style="text-decoration:none">
+                    style="text-decoration:none; color:rgb(12, 150, 214)">
                     <i class="fab fa-twitter nounderline"></i>
                 </a>
                 <a href="#" id="social-net-facebook" class="social-net d-flex align-items-center justify-content-center"
@@ -176,7 +218,7 @@
                     <i class="fab fa-facebook-f"></i>
                 </a>
                 <a href="#" id="social-net-instagram" class="social-net d-flex align-items-center justify-content-center"
-                    style="text-decoration:none"><i class="fab fa-instagram"></i>
+                    style="text-decoration:none; color:rgb(209, 64, 88)"><i class="fab fa-instagram"></i>
                 </a>
             </div>
             <!--Copy-Right-->
