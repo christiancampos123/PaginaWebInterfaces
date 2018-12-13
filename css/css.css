@@ -152,26 +152,25 @@ form {
 /*calculadora*/
 
 input[type="button"]:hover {
-    background-color: slategray;
     cursor: pointer;
 }
 
 input[type="button"].arit {
-    background-color: maroon;
+    background-color: rgb(29, 26, 26);
 }
 
 input[type="button"].igual {
-    background-color: green;
+    background-color: rgb(81, 117, 81);
     width: 126px;
 }
 
 input[type="button"].cero {
-    background-color: blue;
+    background-color: rgb(48, 48, 54);
     width: 126px;
 }
 
 input[type="button"].clear {
-    background-color: orangered;
+    background-color: rgb(112, 59, 59);
 }
 
 form {
@@ -216,7 +215,7 @@ input[type="button"] {
     border: 0px;
     height: 60px;
     color: white;
-    background-color: blue;
+    background-color: rgb(48, 48, 54);
     margin-bottom: 5px;
 }
 
